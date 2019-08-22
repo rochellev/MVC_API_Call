@@ -6,7 +6,7 @@ using RestSharp.Authenticators;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace MvcApiCall.Models
+namespace MVC_API_Call.Models
 {
     public class Article
     {

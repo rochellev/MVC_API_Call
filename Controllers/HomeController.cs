@@ -12,7 +12,9 @@ namespace MVC_API_Call.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var allArticles = Article.GetArticles();
+            return View(allArticles);
+ 
         }
 
         public IActionResult Privacy()

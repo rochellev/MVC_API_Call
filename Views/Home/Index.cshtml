@@ -4,5 +4,24 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@model IEnumerable<MVC_API_Call.Models.Article>
+
+<h2>All Articles</h2>
+<hr />
+<ol>
+    @foreach (var article in Model)
+    {
+        <li>
+            <ul>
+                <li>Section: @Html.DisplayFor(modelItem => article.Section)</li>
+                <li>Title: @Html.DisplayFor(modelItem => article.Title)</li>
+                <li>Abstract: @Html.DisplayFor(modelItem => article.Abstract)</li>
+                <li>Url: @Html.DisplayFor(modelItem => article.Url)</li>
+                <li>Byline: @Html.DisplayFor(modelItem => article.Byline)</li>
+            </ul>
+            <br>
+        </li>
+    }
+</ol>
