@@ -6,20 +6,16 @@
     <h1 class="display-4">Welcome</h1>
 </div>
 
-@model IEnumerable<MVC_API_Call.Models.Article>
+@model IEnumerable<MVC_API_Call.Models.Animal>
 
-<h2>All Articles</h2>
+<h2>All Animal</h2>
 <hr />
 <ol>
-    @foreach (var article in Model)
+    @foreach (var animal in Model)
     {
         <li>
             <ul>
-                <li>Section: @Html.DisplayFor(modelItem => article.Section)</li>
-                <li>Title: @Html.DisplayFor(modelItem => article.Title)</li>
-                <li>Abstract: @Html.DisplayFor(modelItem => article.Abstract)</li>
-                <li>Url: @Html.DisplayFor(modelItem => article.Url)</li>
-                <li>Byline: @Html.DisplayFor(modelItem => article.Byline)</li>
+                <li>Section: @Html.DisplayFor(modelAnimal => animal.Name)</li>
             </ul>
             <br>
         </li>

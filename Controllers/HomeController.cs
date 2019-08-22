@@ -12,8 +12,9 @@ namespace MVC_API_Call.Controllers
     {
         public IActionResult Index()
         {
-            var allArticles = Article.GetArticles();
-            return View(allArticles);
+            //var allArticles = Article.GetArticles();
+            var allAnimals = Animal.GetAnimals();
+            return View(allAnimals);
  
         }
 
