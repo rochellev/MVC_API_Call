@@ -19,7 +19,7 @@ namespace MVC_API_Call.Models
         public static List<Article> GetArticles()
         {
             var client = new RestClient("https://api.nytimes.com/svc/topstories/v2");
-            var request = new RestRequest("home.json?api-key=kWzndQdzsfwvunGur5JBnqeFhzCH0yg1", Method.GET);
+            var request = new RestRequest($"home.json?api-key={EnvironmentVariables.ApiKey}", Method.GET);
             var response = new RestResponse();
             Task.Run(async () =>
             {
